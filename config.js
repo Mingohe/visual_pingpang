@@ -33,13 +33,47 @@
   divide_by: "type",
 
   // 颜色根据什么字段区分？
-  divide_color_by: "name",
+  divide_color_by: "type",
 
   // 字段的值与其对应的颜色值
   // 也可在src/colors.js 中设置
+
+//   China
+// Chinese Taipei
+// Belarus
+// Austria
+// Croatia
+// Republic of Korea
+// Belgium
+// Sweden
+// Germany
+// Greece
+// Singapore
+// Hong Kong, China
+// Denmark
+// Japan
+// Portugal
+// France
+// Brazil
+
   color: {
-    Chinese: "#1177CC",
-    Japanese: "#667788"
+    "中国":"#d62728",
+    "中国台北":"#d62728",
+    "白俄罗斯":"#027c2c",
+    "澳大利亚":"#010387",
+    "克罗地亚":"#0397df",
+    "韩国":"#ddb953",
+    "比利时":"#fae140",
+    "瑞典":"#026aa9",
+    "德国":"#000000",
+    "希腊":"#2859a1",
+    // "新加坡":"",
+    "中国香港":"#d62728",
+    // "丹麦":"",
+    // "日本":"",
+    // "葡萄牙":"",
+    // "法国":"",
+    // "巴西":"",
   },
 
   // 指定一组颜色值，用于自定义所有bar 的配色方案。如果为空则使用默认配置。
