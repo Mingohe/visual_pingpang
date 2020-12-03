@@ -231,6 +231,14 @@ function draw(data) {
     .attr("x", item_x)
     .attr("y", text_y);
 
+  var portrait = svg
+    .insert("svg:image")
+    .attr("height",200)
+    .attr("width",200)
+    .attr("x",1600)
+    .attr("y",600)
+    .attr("xlink:href", "./assets/张继科.jpg")
+
   function dataSort() {
     if (reverse) {
       currentData.sort(function (a, b) {
@@ -434,6 +442,9 @@ function draw(data) {
         lastname = d.name;
         if (d.name.length > 24) return d.name.slice(0, 23) + "...";
         return d.name;
+      });
+      portrait.data(currentData).attr("xlink:href",function (d) {
+        return "./assets/"+ d.name +".jpg";
       });
       if (use_counter == true) {
         // 榜首持续时间更新
