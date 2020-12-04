@@ -444,7 +444,8 @@ function draw(data) {
         return d.name;
       });
       portrait.data(currentData).attr("xlink:href",function (d) {
-        return "./assets/"+ d.name +".jpg";
+        let name = d.name.replace(/[·-]/g,"");
+        return "./assets/"+ name +".jpg";
       });
       if (use_counter == true) {
         // 榜首持续时间更新
