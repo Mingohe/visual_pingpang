@@ -1,2 +1,2 @@
 # visual_pingpang
-ranking history of top 10 pingpang players
+ranking history of top 10 table tennis players
