@@ -208,5 +208,10 @@
 
   // 限制bar info 展示的长度
   // limit bar info display length
-  bar_name_max: 30
+  bar_name_max: 30,
+
+  image_width: 200,
+  image_height: 200,
+  image_position_x: 1600,
+  image_position_Y: 600
 };
