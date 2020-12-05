@@ -231,13 +231,8 @@ function draw(data) {
     .attr("x", item_x)
     .attr("y", text_y);
 
-  var portrait = svg
-    .insert("svg:image")
-    .attr("height",200)
-    .attr("width",200)
-    .attr("x",1600)
-    .attr("y",600)
-    .attr("xlink:href", "./assets/张继科.jpg")
+  var portrait = d3.select("#portrait")
+    .style("background-image", 'url(./assets/张继科.jpg)')
 
   function dataSort() {
     if (reverse) {
@@ -443,9 +438,9 @@ function draw(data) {
         if (d.name.length > 24) return d.name.slice(0, 23) + "...";
         return d.name;
       });
-      portrait.data(currentData).attr("xlink:href",function (d) {
+      portrait.data(currentData).style("background-image",function (d) {
         let name = d.name.replace(/[·-]/g,"");
-        return "./assets/"+ name +".jpg";
+        return "url(./assets/"+ name +".jpg)";
       });
       if (use_counter == true) {
         // 榜首持续时间更新
@@ -899,6 +894,7 @@ function draw(data) {
     i++;
 
     if (i >= time.length) {
+    // if (i >= 2) {
       window.clearInterval(inter);
     }
   }, baseTime * interval_time);
