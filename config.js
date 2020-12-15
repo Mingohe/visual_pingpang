@@ -210,7 +210,7 @@
   // limit bar info display length
   bar_name_max: 30,
 
-  image_width: 200,
+  image_width: 160,
   image_height: 200,
   image_position_x: 1600,
   image_position_Y: 600
