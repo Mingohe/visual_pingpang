@@ -487,7 +487,7 @@ function draw(data) {
         }
       })
       .attr("fill-opacity", 0)
-      .attr("height", 26)
+      .attr("height", 48)
       .attr("y", 50)
       .style("fill", d => getColor(d))
       .transition("a")
@@ -495,10 +495,10 @@ function draw(data) {
       .duration(2490 * interval_time)
       .attr("y", 0)
       .attr("width", d => xScale(xValue(d)))
-      .attr("fill-opacity", 1);
+      .attr("fill-opacity", 0.8);
 
     if (config.rounded_rectangle) {
-      d3.selectAll("rect").attr("rx", 13);
+      d3.selectAll("rect").attr("rx", 0);
     }
     if (config.showLabel == true) {
       barEnter
@@ -509,19 +509,20 @@ function draw(data) {
         .transition("2")
         .delay(500 * interval_time)
         .duration(2490 * interval_time)
-        .attr("fill-opacity", 1)
+        .attr("fill-opacity", 0.9)
         .attr("y", 0)
         .attr("class", function (d) {
           return "label ";
         })
         .attr("x", config.labelx)
-        .attr("y", 20)
+        .attr("y", 30)
         .attr("text-anchor", "end")
-        .text(function (d) {
+        .text(function (d,c,d) {
           if (long) {
             return "";
           }
-          return d.name;
+          return '第' + (c + 1 ) + '名';
+          // return d.name;
         });
     }
 
